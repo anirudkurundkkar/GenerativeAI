@@ -24,6 +24,8 @@ try:
         raise FileNotFoundError(f"Folder '{pdf_folder}' does not exist.")
     if not os.path.isfile(pdf_path):
         raise FileNotFoundError(f"PDF file '{pdf_path}' does not exist.")
+    if not os.path.isfile(properties_path):
+        raise FileNotFoundError(f"Properties file '{properties_path}' does not exist.")
 
     with open(pdf_path, 'rb') as pdf_file:
         reader = PyPDF2.PdfReader(pdf_file)
