@@ -85,7 +85,7 @@ try:
     cursor.close()
     connection.close()
 
-    print(f"Extracted questions inserted into MySQL table `chemistryquestions`.")
+    print(f"Extracted questions inserted into MySQL table `chemistry_questions`.")
 
 except FileNotFoundError:
     print(f"Error: The output file '{output_path}' could not be created or found.")
